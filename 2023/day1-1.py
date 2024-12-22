@@ -12,3 +12,4 @@ with open("day1-input.txt", "rt") as f:
         number = int(numbers[0]+numbers[-1])
         total += number
     print(total)
+
