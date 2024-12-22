@@ -1,2 +1,2 @@
-# AoC2023
+# AoC
 Advent of Code
