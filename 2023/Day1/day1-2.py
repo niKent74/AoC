@@ -1,8 +1,11 @@
+import os.path
+
+INPUT_TXT = os.path.join(os.path.dirname(__file__), 'day1-input.txt')
 
 words = [ "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
 
 
-with open("day1-input.txt", "rt") as f:
+with open(INPUT_TXT, "rt") as f:
     result = 0
     for line in f.readlines():
         nbr_list = []

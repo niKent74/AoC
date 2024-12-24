@@ -1,8 +1,11 @@
+import os.path
+
+INPUT_TXT = os.path.join(os.path.dirname(__file__), 'day1-input.txt')
 
 number = 0
 total = 0
 
-with open("day1-input.txt", "rt") as f:
+with open(INPUT_TXT, "rt") as f:
     lines = f.readlines()
     for line in lines:
         numbers = []

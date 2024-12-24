@@ -1,5 +1,9 @@
+import os.path
 from collections import defaultdict
-f = open("day2-input.txt", "rt").read().strip()
+
+INPUT_TXT = os.path.join(os.path.dirname(__file__), 'day2-input.txt')
+
+f = open(INPUT_TXT, "rt").read().strip()
 
 DIC_max = {'red': 12, 'blue': 14, 'green': 13}
 DIC = defaultdict(int)
