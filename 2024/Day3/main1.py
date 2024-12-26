@@ -7,7 +7,8 @@ TEST_INPUT_TXT = os.path.join(os.path.dirname(__file__), 'test_input.txt')
 
 # epreuve = re.compile(r'mul\(\d+,\d+\)')
 epreuve = re.compile(r'mul\((\d+),(\d+)\)')
-""" mul         texte dans le pattern
+""" 
+    mul         texte dans le pattern
     \(          escape paranthese qui est dans le pattern
     ( \d+ )     \d => matches any digit [0-9]; + => 1 ou plusieurs repetitions
     ,           virgule dans le pattern
