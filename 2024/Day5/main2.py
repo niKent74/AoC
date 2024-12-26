@@ -24,8 +24,8 @@ def check_update(page):
         page_after = page[i+1:]
         if not check_rules(rules, page_cur, page_before, page_after):
             return False
+    #print(page[len(page)//2])
     return int(page[len(page)//2])
-
 
 
 def check_rules(rules, page_cur, page_before, page_after):
@@ -45,20 +45,17 @@ def check_rules(rules, page_cur, page_before, page_after):
             a_check = a not in page_after
             if a_count >=0 and a_check:
                 pass
-                
             else:
                 return False
-
+            
     return True
 
 
 if __name__ == '__main__':
-    pages = read_input(INPUT_TXT, ",", "list")
-    rules = read_input(RULES_TXT, "|", "tuple")
+    pages = read_input(TEST_INPUT_TXT, ",", "list")
+    rules = read_input(TEST_RULES_TXT, "|", "tuple")
     for i in range(len(pages)):
         result += check_update(pages[i])
-        
-
 
 print(result)
 print("program ended")
