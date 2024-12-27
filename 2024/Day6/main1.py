@@ -1,11 +1,13 @@
 import os.path
+import time
 
-
+start_time = time.time()
 INPUT_TXT = os.path.join(os.path.dirname(__file__), 'input.txt')
 TEST_INPUT_TXT = os.path.join(os.path.dirname(__file__), 'test_input.txt')
 result = 0
 directions =[["^", (-1, 0)], [">", (0, 1)], ["v", (1, 0)], ["<", (0, -1)]]
 directions_symbols =["^", ">", "v", "<"]
+
 
 
 def read_input(filename, sep, type):
@@ -133,3 +135,6 @@ if __name__ == '__main__':
 
 print(result)
 print("program ended")
+end_time = time.time()
+print("--- %s seconds ---" % (end_time - start_time))
+
