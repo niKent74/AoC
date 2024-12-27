@@ -24,7 +24,7 @@ def check_update(page):
         page_after = page[i+1:]
         if not check_rules(rules, page_cur, page_before, page_after):
             return False
-    #print(page[len(page)//2])
+    
     return int(page[len(page)//2])
 
 
@@ -35,9 +35,7 @@ def check_rules(rules, page_cur, page_before, page_after):
             b_check = b not in page_before
             if b_count >= 0 and b_check:
                 pass
-                
             else:
-                #print("not ok")
                 return False
         
         if b == page_cur:
