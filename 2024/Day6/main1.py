@@ -21,11 +21,13 @@ def current_pos(puzzle_grid, rows, cols):
     for row in range(rows):
         for col in range(cols):
             if puzzle_grid[row][col] in directions_symbols:
-                start_pos_col = col
-                start_pos_row = row
-                start_symbol = puzzle_grid[row][col]                
-                return [start_pos_row, start_pos_col] , start_symbol
+                return [row, col] , puzzle_grid[row][col]
 
+
+def get_direction(directions, cur_dir):
+    for key, value in directions.items():
+        if cur_dir == key:
+            return value 
 
 def update_position(puzzle_grid, rows, cols, cur_pos, cur_dir):
     if cur_dir == "^":
