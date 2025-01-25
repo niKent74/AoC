@@ -52,7 +52,7 @@ def antinodes(puzzle_grid, antenas_loc, antenas_typ):
 
         
 if __name__ == '__main__':
-    puzzle_grid = read_input(INPUT_TXT, "", "list")
+    puzzle_grid = read_input(TEST_INPUT_TXT, "", "list")
     antenas_loc, antenas_typ = antenas(puzzle_grid)
     antinodes_lst = antinodes(puzzle_grid, antenas_loc, antenas_typ)
 
